@@ -9,6 +9,7 @@ Checks: "*,
   -llvm*,
   -zircon-*,
   -modernize-use-trailing-return-type,
+  -cppcoreguidelines-pro-bounds-constant-array-index,
   -*-avoid-c-arrays,
   -*-magic-numbers,
   -misc-use-anonymous-namespace,
@@ -21,6 +22,7 @@ CheckOptions:
   misc-include-cleaner.IgnoreHeaders: '
       spdlog/.*;
   '
+  misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic: true
   readability-identifier-naming.NamespaceCase: lower_case
   readability-identifier-naming.ClassCase: lower_case
   readability-identifier-naming.StructCase: lower_case
