@@ -1,0 +1,38 @@
+---
+# Configure clang-tidy for this project.
+Checks: "*,
+  -abseil-*,
+  -altera-*,
+  -android-*,
+  -fuchsia-*,
+  -google-*,
+  -llvm*,
+  -modernize-use-trailing-return-type,
+  -zircon-*,
+  -readability-magic-numbers,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -clang-diagnostic-builtin-macro-redefined,
+  "
+
+# Turn all the warnings from the checks above into errors.
+WarningsAsErrors: "*"
+CheckOptions:
+  misc-include-cleaner.IgnoreHeaders: '
+      spdlog/.*;
+  '
+  readability-identifier-naming.NamespaceCase: lower_case
+  readability-identifier-naming.ClassCase: lower_case
+  readability-identifier-naming.StructCase: lower_case
+  readability-identifier-naming.ClassSuffix: _t
+  readability-identifier-naming.StructSuffix: _t
+  readability-identifier-naming.TemplateParameterCase: aNy_CasE
+  readability-identifier-naming.FunctionCase: lower_case
+  readability-identifier-naming.VariableCase: lower_case
+  readability-identifier-naming.ClassMemberCase: lower_case
+  readability-identifier-naming.PrivateMemberSuffix: _
+  readability-identifier-naming.EnumConstantCase: aNy_CasE
+  readability-identifier-naming.ConstexprVariableCase: CamelCase
+  readability-identifier-naming.ConstexprVariablePrefix: k
+  readability-implicit-bool-conversion.AllowIntegerConditions: true
+  readability-implicit-bool-conversion.AllowPointerConditions: true
+  readability-function-cognitive-complexity.IgnoreMacros: true
