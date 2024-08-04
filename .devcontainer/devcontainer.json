@@ -1,0 +1,15 @@
+{
+  "name": "aoc dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "jetbrains": {
+      "settings": {
+        "com.intellij:app:EditorSettings.soft_wrap_file_masks": "*.md; *.txt; *.rst; *.adoc",
+        "Docker:app:DockerSettings.dockerComposePath": "/usr/bin/docker",
+        "Docker:app:DockerSettings.dockerPath": "/usr/bin/docker"
+      }
+    }
+  }
+}
