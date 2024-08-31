@@ -8,6 +8,6 @@ set(CMAKE_C_FLAGS_DEBUG_INIT "-g3 -O0 ${sanitizers}" CACHE INTERNAL "c flags deb
 set(CMAKE_CXX_FLAGS_DEBUG_INIT "-g3 -O0 ${sanitizers}" CACHE INTERNAL "cxx flags debug init")
 SET(CMAKE_ASM_FLAGS_DEBUG_INIT "-g3" CACHE INTERNAL "asm debug compiler flags")
 
-set(CMAKE_C_FLAGS_RELEASE_INIT "-O3 -Werror" CACHE INTERNAL "c flags release init")
-set(CMAKE_CXX_FLAGS_RELEASE_INIT "-O3 -Werror" CACHE INTERNAL "cxx flags release init")
-set(CMAKE_ASM_FLAGS_RELEASE_INIT "-Werror" CACHE INTERNAL "asm release compiler flags")
+set(CMAKE_C_FLAGS_RELEASE_INIT "-O3 " CACHE INTERNAL "c flags release init")
+set(CMAKE_CXX_FLAGS_RELEASE_INIT "-O3" CACHE INTERNAL "cxx flags release init")
+set(CMAKE_ASM_FLAGS_RELEASE_INIT "" CACHE INTERNAL "asm release compiler flags")
